@@ -1,0 +1,3 @@
+github "antitypical/Result"
+github "Alamofire/Alamofire"
+github "SwiftyJSON/SwiftyJSON"
