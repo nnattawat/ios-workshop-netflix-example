@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B4A9C8C1E28416100665229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9C8B1E28416100665229 /* AppDelegate.swift */; };
-		4B4A9C8E1E28416100665229 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9C8D1E28416100665229 /* ViewController.swift */; };
+		4B4A9C8E1E28416100665229 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A9C8D1E28416100665229 /* MoviesViewController.swift */; };
 		4B4A9C911E28416100665229 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9C8F1E28416100665229 /* Main.storyboard */; };
 		4B4A9C931E28416100665229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9C921E28416100665229 /* Assets.xcassets */; };
 		4B4A9C961E28416100665229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4A9C941E28416100665229 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		4B4A9C881E28416100665229 /* TableViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4A9C8B1E28416100665229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B4A9C8D1E28416100665229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B4A9C8D1E28416100665229 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		4B4A9C901E28416100665229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B4A9C921E28416100665229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B4A9C951E28416100665229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4B4A9C8B1E28416100665229 /* AppDelegate.swift */,
-				4B4A9C8D1E28416100665229 /* ViewController.swift */,
+				4B4A9C8D1E28416100665229 /* MoviesViewController.swift */,
 				4B9C839F1E287F4E00500C07 /* NetflixClient.swift */,
 				4B4A9C8F1E28416100665229 /* Main.storyboard */,
 				4B4A9C921E28416100665229 /* Assets.xcassets */,
@@ -180,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9C83A01E287F4E00500C07 /* NetflixClient.swift in Sources */,
-				4B4A9C8E1E28416100665229 /* ViewController.swift in Sources */,
+				4B4A9C8E1E28416100665229 /* MoviesViewController.swift in Sources */,
 				4B4A9C8C1E28416100665229 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

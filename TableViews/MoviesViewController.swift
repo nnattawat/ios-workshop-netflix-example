@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MoviesViewController.swift
 //  TableViews
 //
 //  Created by Rhydian Thomas on 13/1/17.
@@ -8,11 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+/// A View controller to render lists of movies
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+  // MARK: - Properties
   
   @IBOutlet weak var tableView: UITableView!
   
   var movies = [Movie]()
+  
+
+  
+  // MARK: - Lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    NetflixClient().fetch(forActorName: "Mel Gibson") { movies in
+      self.movies = movies
+      self.tableView.reloadData()
+    }
+  }
+
+  
+  
+  // MARK: - UITableViewDataSource
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return movies.count
@@ -29,6 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     return "Mel Movies"
   }
   
+  
+  
+  // MARK: - UITableViewDelegate
+  
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let movie = movies[indexPath.row]
     
@@ -37,15 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     alertController.addAction(closeAction)
     
     self.present(alertController, animated: true, completion: nil)
-  }
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    NetflixClient().fetch(forActorName: "Mel Gibson") { movies in
-      self.movies = movies
-      self.tableView.reloadData()
-    }
   }
 
 }

@@ -9,6 +9,8 @@
 import Alamofire
 import SwiftyJSON
 
+
+/// A model struct, used to capture movie details
 struct Movie {
   let showId: Double?
   let showTitle: String?
@@ -22,6 +24,8 @@ struct Movie {
   let runtime: String?
 }
 
+
+/// Maps a movie API response to `Movie` isntances
 class MovieMapper {
   func objectGraphFrom(data: Data?) -> [Movie] {
     var movies =  [Movie]()
@@ -35,8 +39,9 @@ class MovieMapper {
   }
 }
 
+
+/// Fetch movies from the Netflix API
 class NetflixClient {
-  
   func fetch(forActorName actor: String, completion: @escaping ([Movie]) -> Void) {
     let parameters: Parameters = ["actor": actor]
     Alamofire.request("http://netflixroulette.net/api/api.php", parameters: parameters)
